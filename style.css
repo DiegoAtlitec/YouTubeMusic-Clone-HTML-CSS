@@ -1,0 +1,360 @@
+:root {
+    --bgcolor: #;
+    --blanco: #ffffff;
+    --verde: #1db954;
+    --negro: #000000;
+    --color-sidebar: #181818;
+    --amarillo: #ffc638;
+    --darkred: #aa2a2a;
+    --gris: #a6a6a6;
+    --darkgris: #393534;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Body */
+body {
+    display: flex;
+    background-color: var(--negro);
+    color: var(--blanco);
+    height: 100vh;
+}
+
+/* Barra de navegación */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    display: inline-flex;
+    align-items: center;
+    padding: 16px 20px;
+    background-color: var(--negro);
+    z-index: 1000;
+}
+/*++++++++++++++++++++++++++++++++++++++++++*/
+.menu-icon {
+    padding: 5px;
+    margin-right: 10px;
+    background-color: var(--negro);
+    border-radius: 50px;
+    color: var(--blanco);
+}
+
+.menu-icon:hover {
+    background-color: var(--darkgris);
+}
+
+/*++++++++++++++++++++++++++++++++++++++++++*/
+.logo_link {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: inherit;
+    padding: 1px;
+    margin-right: 25px;
+}
+
+.logo_img img {
+    height: 26px;
+    width: auto;
+}
+
+.logo_img {
+    margin-right: 4px;
+}
+
+.logo_name {
+    font-size: 16px;
+    color: var(--gris);
+    font-weight: bold;
+}
+
+/*++++++++++++++++++++++++++++++++++++++++++*/
+.search-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.search-bar {
+    padding: 13px 18px 13px 30px;
+    border: 1px solid #fff;
+    border-radius: 5px;
+    background-color: var(--negro);
+    color: #fff;
+    width: 380px;
+}
+
+.search-container i {
+    position: absolute;
+    left: 10px;
+    color: var(--gris);
+}
+
+/*++++++++++++++++++++++++++++++++++++++++++*/
+.right-bar {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    margin-left: auto; /* Empuja el right-bar a la derecha */
+}
+
+.fa-tv{
+    margin-right: 10px;
+}
+
+.perfil_img img{
+    height: 36px;
+    width: auto;
+}
+
+/* Sidebar */
+
+.sidebar {
+    background-color: var(--negro);
+    position: fixed;
+    margin-top: 52px;
+    padding: 16px 7px;
+    border: 1px;
+}
+.sidebar div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 5px;
+    padding: 10px 7px;
+    background-color: none;
+    cursor: pointer;
+    margin-bottom: 1px;
+}
+.sidebar div:hover{
+    background-color: var(--darkgris);
+}
+.sidebar a{
+    color: var(--blanco);
+    font-size: 22px;
+}
+.sidebar p{
+    font-size: 9px;
+
+}
+/* Contenido principal */
+.content {
+    margin-right: 700px;
+    margin-left: 180px;
+    margin-top: 50px;
+    flex-grow: 1;
+    padding: 0px;
+    background-color: var(--negro);
+    max-width: 1100px;
+}
+
+
+/* Superior */
+.superior{
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    background-color: var(--negro);
+}
+.superior div h3{
+    color: var(--gris);
+    font-size: 12px;
+}
+.superior div h2{
+    color: var(--blanco);
+    font-size: 25px;
+}
+.perfil_img2{
+    margin-right: 10px;
+}
+.perfil_img2 img{
+    height: 46px;
+    width: auto;
+
+}
+
+.superior-boton{
+    display: inline-block;
+    padding: 8px 15px;
+    font-size: 15px;
+    color: var(--blanco);
+    text-decoration: none;
+    background-color: var(--negro);
+    border: 1px solid white;
+    border-radius: 40px;
+    margin-left: 10px;
+    cursor: pointer;
+    margin-right: 10px;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.superior-redondo{
+    padding: 8px 12px;
+
+}
+.superior-boton:hover{
+    background-color: var(--darkgris);
+}
+
+/* Categorias */
+
+.categorias {
+    padding-top: 35px;
+    padding-bottom: 20px;
+    display: inline-flex; 
+    background-color: none;
+}
+
+.categorias div{
+    border-radius: 10px;
+    background-color: var(--darkgris);
+    padding: 10px;
+    margin-right: 10px;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+.categorias div:hover{
+    background-color: var(--gris);
+}
+
+.categorias a{
+    text-decoration: none;
+    color: var(--blanco);
+    font-size: 14px;
+}
+
+
+
+/* Cards */
+div.scrollmenu {
+    display: flex;
+    background-color: var(--negro);
+    overflow: auto;
+    white-space: nowrap;
+
+}
+div.scrollmenu div  {
+  display: block;
+  color: white;
+  text-align: center;
+  
+  text-decoration: none;
+}
+
+div.scrollmenu div:hover {
+  background-color: #777;
+}
+
+
+.card{
+    width: 100%;
+    padding: 10px;
+}
+
+.image-container {
+    position: relative; /* Necesario para posicionar el overlay */
+    overflow: hidden;
+    cursor: pointer; /* Asegura que el overlay no se salga del contenedor */
+}
+.image-container::before {
+    content: ""; /* Elemento vacío para el overlay */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 25%; /* Oscurece solo la parte superior */
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0) 100%); /* Degradado suave */
+    transition: background 0.3s ease;
+    pointer-events: none;
+}
+.image-container:hover::before {
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0) 50%);/* Oscurece la parte superior al pasar el ratón */
+}
+
+.card img {
+    width: 185px;
+    border-radius: 7px;
+}
+.card p{
+    display: flex;
+}
+.nombre_cancion p{
+    margin-top: 17px;
+    color: var(--blanco);
+}
+.desc_cancion p{
+    color: var(--gris);
+    margin-top: 4px;
+}
+
+/* Lista rápida */
+.quick-scrollmenu{
+    display: flex;
+    background-color: var(--negro);
+    overflow: auto;
+    white-space: nowrap;
+    margin-top: 20px;
+}
+
+.quick-column{
+    background-color: var(--negro);
+    margin-right: 15px;
+
+}
+.quick-desc{
+    padding: 8px 15px;
+}
+.quick-card{
+    width: 320px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: var(--negro);
+    margin-bottom: 12px;
+}
+.image-container img{
+    display: flex;
+    align-items: center;
+}
+.quick-card img {
+    width: 55px;
+    height: 55px;
+    border-radius: 3px;
+}
+.quick-nombre_cancion p {
+    margin: 0; 
+    color: var(--blanco);
+    cursor: pointer;
+}
+
+.quick-desc_cancion p {
+    margin: 0; 
+    color: var(--gris);
+}
+
+
+
+
+
+/* Responsive */
+@media (max-width: 768px) {
+    .sidebar {
+        display: none;
+    }
+
+    .content {
+        margin-left: 0;
+    }
+
+    .cards {
+        justify-content: center;
+    }
+
+    .search-bar {
+        width: 60%;
+    }
+}
